@@ -2,7 +2,7 @@
 
 Este proyecto utiliza un modelo de Machine Learning, específicamente un `RandomForestClassifier`, para predecir si una persona es fumadora o no, basándose en un conjunto de datos de salud y mediciones corporales.
 
-El notebook (`RandomForestClassifier_tp2_v2_6.ipynb`) abarca todo el flujo de trabajo, desde el análisis exploratorio de los datos y la limpieza, hasta el entrenamiento, la optimización de hiperparámetros, el ajuste del umbral de decisión y la generación de predicciones sobre un nuevo conjunto de datos.
+El notebook (`RandomForestClassifier_tp2_v2_7.ipynb`) abarca todo el flujo de trabajo, desde el análisis exploratorio de los datos y la limpieza, hasta el entrenamiento, la optimización de hiperparámetros, el ajuste del umbral de decisión y la generación de predicciones sobre un nuevo conjunto de datos.
 
 ## 📋 Características
 
@@ -10,7 +10,6 @@ El notebook (`RandomForestClassifier_tp2_v2_6.ipynb`) abarca todo el flujo de tr
 - **Preprocesamiento con `Pipeline`:** Uso de `ColumnTransformer` y `OneHotEncoder` para manejar eficientemente las variables categóricas.
 - **Optimización de Modelo:** Búsqueda de los mejores hiperparámetros con `RandomizedSearchCV` para combatir el sobreajuste.
 - **Análisis de Importancia de Variables:** Identificación de las características más influyentes para el modelo.
-- **Ajuste del Umbral de Decisión:** Optimización del umbral de probabilidad para mejorar el **recall** de la clase "fumador".
 - **Persistencia del Modelo:** El modelo final optimizado se guarda con `joblib` para su reutilización.
 - **Gestión de Dependencias:** Uso de `requirements.txt` para una fácil y reproducible instalación del entorno.
 
@@ -23,12 +22,12 @@ El notebook (`RandomForestClassifier_tp2_v2_6.ipynb`) abarca todo el flujo de tr
 │   └── smoking_prediction_entrega.xlsx   # Nuevos datos para realizar predicciones.
 │
 ├── modelo/
-│   └── modelo_fumador_v2.6.joblib        # El modelo RandomForest entrenado y guardado.
+│   └── modelo_fumador_v2.7.joblib        # El modelo RandomForest entrenado y guardado.
 │
 ├── prediction_result/
 │   └── schimizzi_reporte_prediccion_fumadores.xlsx  # El archivo Excel final con las predicciones.
 │
-├── RandomForestClassifier_tp2_v2_6.ipynb   # Notebook principal con todo el análisis y modelado.
+├── RandomForestClassifier_tp2_v2_7.ipynb   # Notebook principal con todo el análisis y modelado.
 ├── requirements.txt                        # Archivo con las dependencias del proyecto.
 └── README.md                               
 ```
@@ -75,20 +74,19 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local.
     ```
 
 4.  **Ejecuta el Notebook:**
-    Abre y ejecuta las celdas del archivo `RandomForestClassifier_tp2_v2_6.ipynb` en un entorno como Jupyter Notebook o Google Colab para ver todo el proceso.
+    Abre y ejecuta las celdas del archivo `RandomForestClassifier_tp2_v2_7.ipynb` en un entorno como Jupyter Notebook o Google Colab para ver todo el proceso.
 
 ## 🧠 Flujo de Trabajo del Notebook
 
 1.  **Análisis Exploratorio de Datos (EDA):** Se analizaron distribuciones y correlaciones para entender los datos y seleccionar las variables más relevantes.
 2.  **Preprocesamiento y Pipeline:** Se construyó un `Pipeline` para automatizar la codificación de variables categóricas (`OneHotEncoder`) y el modelado.
 3.  **Entrenamiento y Optimización:** Se utilizó `RandomizedSearchCV` para encontrar los mejores hiperparámetros y crear un modelo `RandomForest` robusto.
-4.  **Ajuste del Umbral de Decisión:** Se ajustó el umbral de probabilidad a **0.45** para priorizar la correcta identificación de fumadores (mejorar `recall`).
-5.  **Persistencia:** El modelo final fue guardado en `modelo/modelo_fumador_v2.6.joblib`.
-6.  **Predicción:** El notebook final carga el modelo guardado, procesa un nuevo dataset y exporta las predicciones a `prediction_result/`.
+4.  **Persistencia:** El modelo final fue guardado en `modelo/modelo_fumador_v2.7.joblib`.
+5.  **Predicción:** El notebook final carga el modelo guardado, procesa un nuevo dataset y exporta las predicciones a `prediction_result/`.
 
 ## 📊 Resultados
 
-El modelo final logra un buen balance entre la identificación de fumadores y no fumadores, con un **recall para la clase "fumador" de 0.84** en el conjunto de prueba, cumpliendo con el objetivo de priorizar la detección de esta clase.
+El modelo final logra un buen balance entre la identificación de fumadores y no fumadores, con una **precision 0.65, recall 0.73, f1-score 0.69 y un accuracy 0.76  para la clase "fumador"** en el conjunto de prueba, cumpliendo con el objetivo del negocio.
 
 ## 👨‍💻 Autor
 
