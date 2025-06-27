@@ -30,7 +30,7 @@ El notebook (`RandomForestClassifier_tp2_v2_6.ipynb`) abarca todo el flujo de tr
 │
 ├── RandomForestClassifier_tp2_v2_6.ipynb   # Notebook principal con todo el análisis y modelado.
 ├── requirements.txt                        # Archivo con las dependencias del proyecto.
-└── README.md                               # Este archivo.
+└── README.md                               
 ```
 
 ## ⚙️ Requisitos y Entorno
@@ -52,7 +52,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local.
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [https://github.com/Schimizzi/RandomForest_tp2_UP.git](https://github.com/Schimizzi/RandomForest_tp2_UP.git)
+    git clone https://github.com/Schimizzi/RandomForest_tp2_UP.git
     cd RandomForest_tp2_UP
     ```
 
@@ -92,4 +92,4 @@ El modelo final logra un buen balance entre la identificación de fumadores y no
 
 ## 👨‍💻 Autor
 
-- **claudio** - [Schimizzi](https://github.com/Schimizzi)
+- **claudio**  [Schimizzi](https://github.com/Schimizzi)
